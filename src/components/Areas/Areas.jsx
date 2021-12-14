@@ -11,7 +11,6 @@ const Areas = () => {
     const { IdArea } = useParams();
     const [state, setState] = useState([]);
 
-
     useEffect(() => {
 
         var request = "/api/Definitions/Areas";
@@ -64,8 +63,6 @@ const Areas = () => {
                 </div>
             </div>
         </div>
-
-
     </>);
 
 }

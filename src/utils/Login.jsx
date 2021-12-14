@@ -24,7 +24,6 @@ const Login = () => {
         const response = await fetch(URL_API_TURISCLUB + request, config);
         const tok = await response.json();
         Cookies.set("Token", tok.value)
-
     }
 
     useEffect(() => {

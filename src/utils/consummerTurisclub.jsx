@@ -52,21 +52,17 @@ export default class TurisclubConsummer extends React.Component {
     componentDidMount() {
 
         this.query();
-        console.log('Fecha de Hoy :>> ', datestring);
+
     }
 
     render() {
-        return (<>
-
-
-            <div>
-                {this.state.entities.map((entity) => {
-                    return (<p key={entity.Id} style={{ color: 'white' }}>
-                        Tipo Cambio Contado: ${entity.TipoCambio} | Tipo Cambio Crédito: ${entity.ValorTerrestre == null ? (entity.TipoCambio + 10) : entity.ValorTerrestre}
-                    </p>);
-                })}
-            </div>
-        </>);
+        return (<div>
+            {this.state.entities.map((entity) => {
+                return (<p key={entity.Id} style={{ color: 'white' }}>
+                    Tipo Cambio Contado: ${entity.TipoCambio} | Tipo Cambio Crédito: ${entity.ValorTerrestre == null ? (entity.TipoCambio + 10) : entity.ValorTerrestre}
+                </p>);
+            })}
+        </div>);
     }
 
 }
