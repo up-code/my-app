@@ -12,12 +12,8 @@ const Programa = () => {
     //Inicio Petición API
     var request = `/api/Programs/retrieve/${IdPrograma}`;
     var myHeaders = new Headers();
-    if (!Cookies.get('Token')) {
-        myHeaders.append('Content-Type', 'application/json');
-    } else {
-        myHeaders.append('Content-Type', 'application/json');
-        myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
-    }
+    myHeaders.append('Content-Type', 'application/json');
+    myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
 
     var raw = JSON.stringify({ "EntityId": IdPrograma, "CurrencyCode": "CLP" });
 

@@ -13,12 +13,8 @@ const ProgramasList = () => {
 
     var request = "/api/Programs/List";
     var myHeaders = new Headers();
-    if (!Cookies.get('Token')) {
-        myHeaders.append('Content-Type', 'application/json');
-    } else {
-        myHeaders.append('Content-Type', 'application/json');
-        myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
-    }
+    myHeaders.append('Content-Type', 'application/json');
+    myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
 
 
 

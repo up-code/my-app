@@ -16,12 +16,8 @@ const Areas = () => {
 
         var request = "/api/Definitions/Areas";
         var myHeaders = new Headers();
-        if (!Cookies.get('Token')) {
-            myHeaders.append('Content-Type', 'application/json');
-        } else {
-            myHeaders.append('Content-Type', 'application/json');
-            myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
-        }
+        myHeaders.append('Content-Type', 'application/json');
+        myHeaders.append("Authorization", `Bearer ${Cookies.get('Token')}`);
 
         var raw = JSON.stringify({
             "EqualityFilter": { "IDArea": IdArea }
